@@ -1,12 +1,10 @@
-from fastapi import FastAPI, status, Depends
+from fastapi import FastAPI, Depends
 from pydantic import BaseModel
 from typing import List, Annotated
 
-from starlette import status
-
 import models
 
-from database import engine, SessionLocal
+from app.database import engine, SessionLocal
 
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)

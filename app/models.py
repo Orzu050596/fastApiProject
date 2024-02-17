@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Boolean
-from database import Base
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
+from app.database import Base
 
 class Question(Base):
     __tablename__ = "questions"
